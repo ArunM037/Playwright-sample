@@ -34,7 +34,7 @@ test('parameterized methods @smoke', async ({ page }) => {
     await pm.onDatepickerPage().selectDatepickerWithRangeFromToday(10, 20)
 })
 
-test.only('navigate to form page @smoke', async ({ page }) => {
+test.only('navigate to form page', async ({ page }) => {
     const pm = new PageManager(page)
     await pm.navigateTo().formsLayoutsPage()
     await pm.navigateTo().datepickerPage()
