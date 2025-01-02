@@ -33,3 +33,10 @@ test('parameterized methods @smoke', async ({ page }) => {
     await pm.onDatepickerPage().selectCommonDatePickerFromToday(10)
     await pm.onDatepickerPage().selectDatepickerWithRangeFromToday(10, 20)
 })
+
+test.only('navigate to form page @smoke', async ({ page }) => {
+    const pm = new PageManager(page)
+    await pm.navigateTo().formsLayoutsPage()
+    await pm.navigateTo().datepickerPage()
+    await pm.navigateTo().smartTablePage()
+})
